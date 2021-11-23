@@ -87,12 +87,19 @@ function deselectChoices() {
     });
 }
 
+function showProgress(questionNumber) {
+    let progress = document.getElementById("progress");
+    width = (questionNumber / quizData.length) * 100;
+    progress.style.width = width + "%";
+}
+
 let score = 0;
 let questionNumber = 0;
 let submitBtn = document.getElementById("submit");
 let error = document.getElementById("error_msg");
 
 loadQuiz(questionNumber);
+showProgress(1);
 
 submitBtn.addEventListener("click", () => {
     let answer = getSelectedChoice();
@@ -104,6 +111,7 @@ submitBtn.addEventListener("click", () => {
         questionNumber += 1;
         if (questionNumber < quizData.length) {
             loadQuiz(questionNumber);
+            showProgress(questionNumber + 1);
             submitBtn.innerHTML = (questionNumber == quizData.length - 1) ? "Submit" : "Next";
         } else {
             quiz = document.getElementById("quiz");
