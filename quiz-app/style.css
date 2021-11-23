@@ -13,15 +13,18 @@ body {
 }
 #progress_bar {
     width: 100%;
-    /* background-color: grey; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-  
 #progress {
-    width: 1%;
-    height: 5px;
-    background-color: green;
+    height: 4px;
+    background-color: #18ade7;
 }
-
+#progress_label {
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
 .quiz_container {
     padding: 10px;
     width: 500px;

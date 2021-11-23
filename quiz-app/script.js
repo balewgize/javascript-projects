@@ -89,8 +89,11 @@ function deselectChoices() {
 
 function showProgress(questionNumber) {
     let progress = document.getElementById("progress");
+    let progressLabel = document.getElementById("progress_label");
+
     width = (questionNumber / quizData.length) * 100;
     progress.style.width = width + "%";
+    progressLabel.innerHTML = `${questionNumber}/${quizData.length}`;
 }
 
 let score = 0;
