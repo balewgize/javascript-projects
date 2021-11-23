@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Test your level of understanding.</h1>
+    <div class="quiz_container">
+        <div id="quiz">
+            <p id="question">Question text</p>
+            <ul>
+                <li><input type="radio" id="ch1" name="quiz" value="ch1">
+                    <label for="ch1" id="ch1_text">Answer 1</label>
+                </li>
+                <li><input type="radio" id="ch2" name="quiz" value="ch2">
+                    <label for="ch2" id="ch2_text">Answer 2</label>
+                </li>
+                <li><input type="radio" id="ch3" name="quiz" value="ch3">
+                    <label for="ch3" id="ch3_text">Answer 3</label>
+                </li>
+                <li><input type="radio" id="ch4" name="quiz" value="ch4">
+                    <label for="ch4" id="ch4_text">Answer 4</label>
+                </li>
+            </ul>
+            <span id="error_msg">Please select an answer to continue.</span>
+        </div>
+        <div class="action">
+            <!-- <button onclick="getPreviousQuestion()" disabled>Previous</button> -->
+            <button id="submit">Next</button>
+        </div>
+    </div>
+</body>
+</html>
